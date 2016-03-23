@@ -95,7 +95,7 @@ passport.serializeUser(function(user, done) {
 });
 
 passport.deserializeUser(function(id, done) {
-  	User.getUserByUsername(id, function(err, user) {
+  	User.getUserById(id, function(err, user) {
     	done(err, user);
   	});
 });
@@ -126,6 +126,13 @@ router.post('/login', passport.authenticate('local', {failureRedirect:'/users/lo
 	console.log('Authentication Successful');
 	req.flash('success', 'You are logged in');
 	res.redirect('/');
+});
+
+
+router.get('/logout', function(req, res){
+	req.logout();
+	req.flash('success', 'You have logged out');
+	res.redirect('/users/login');
 });
 
 
