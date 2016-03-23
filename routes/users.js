@@ -23,7 +23,7 @@ router.get('/login', function(req, res, next) {
   });
 });
 
-router.post('/register', upload.array(), function(req, res, next){
+router.post('/register', function(req, res, next){
 	console.log(req.body);
 		// Get form values
 	var name = req.body.name;
@@ -33,7 +33,7 @@ router.post('/register', upload.array(), function(req, res, next){
 	var password2 = req.body.password2;
 
 	// Check for image field
-	if(req.file){
+	if(req.files.profileimage){
 		console.log('uploading file...');
 
 		// file info

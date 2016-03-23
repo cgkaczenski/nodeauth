@@ -27,6 +27,9 @@ build/Release
 node_modules
 jspm_packages
 
+# picture uploads
+uploads
+
 # Optional npm cache directory
 .npm
 

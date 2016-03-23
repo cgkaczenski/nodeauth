@@ -19,7 +19,7 @@
     "mongodb": "2.1.10",
     "mongoose": "4.4.8",
     "morgan": "~1.6.1",
-    "multer": "1.1.0",
+    "multer": "0.1.8",
     "passport": "0.3.2",
     "passport-http": "0.3.0",
     "passport-local": "1.0.0",
